@@ -3,14 +3,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
     {
+        //the problem with spases
         OnePoint onePoint = new OnePoint();
         onePoint.getAnswer();
 
         MidleOfString midleOfString = new MidleOfString();
         Scanner in = new Scanner(System.in);
-        String str = in.next();
+        String str = in.nextLine();
+
         midleOfString.getAnswer(str);
 
+        str = in.nextLine();
+        in.close();
+        MonotonousString monotonousString = new MonotonousString();
+        monotonousString.getAnswer(str);
 
     }
 }
