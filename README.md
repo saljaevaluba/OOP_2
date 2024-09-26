@@ -1,2 +1,2 @@
 # OOP_2
-Laboratory work of the subject "Object-oriented and functional programming"
+The first laboratory work of the subject "Object-oriented and functional programming"
