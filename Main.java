@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
     {
-        //the problem with spases
         OnePoint onePoint = new OnePoint();
         onePoint.getAnswer();
 
