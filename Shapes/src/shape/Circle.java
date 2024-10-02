@@ -1,7 +1,5 @@
 package shape;
 
-import color.Color;
-
 public class Circle extends Shape{
 
     private Point point;
@@ -26,6 +24,7 @@ public class Circle extends Shape{
     public void setRadius(double radius) {this.radius = radius;}
 
     private boolean validate() {
+        //я знаю, что exception неправильный
         if(radius <= 0) {throw new NullPointerException("Ошибка создания фигуры: радиус не может быть меньше или равным нуля!");}
         return true;
     }
@@ -43,8 +42,8 @@ public class Circle extends Shape{
         System.out.println("Фигура круг");
         System.out.println("Центр круга: (x = " + point.getX() + ", y = " + point.getY() + ")");
         System.out.println("Радиус круга: " + radius);
-        System.out.println("Площадь круга: " + super.getArea());
-        System.out.println("Периметр круга: " + super.getPerimeter());
+        System.out.println("Площадь круга: " + getArea());
+        System.out.println("Периметр круга: " + getPerimeter());
         System.out.println("Цветкруга: " + super.getColor());
     }
 }
