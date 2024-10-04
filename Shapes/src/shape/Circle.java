@@ -9,11 +9,10 @@ public class Circle extends Shape{
         point = new Point();
         radius = 1;
     }
-    Circle(Point point, double radius){
-        if(validate()) {
-            this.radius = radius;
-            this.point = point;
-        }
+    Circle(Point point, double radius) throws Exception {
+        this.validate(radius);
+        this.radius = radius;
+        this.point = point;
     }
     public Point getPoint() {return point;}
 
@@ -23,18 +22,32 @@ public class Circle extends Shape{
 
     public void setRadius(double radius) {this.radius = radius;}
 
-    private boolean validate() {
-        //я знаю, что exception неправильный
-        if(radius <= 0) {throw new NullPointerException("Ошибка создания фигуры: радиус не может быть меньше или равным нуля!");}
-        return true;
+    private void validate(double radius) throws Exception{
+        if(radius <= 0) throw new java.lang.Exception("Ошибка создания фигуры: радиус не может быть меньше или равным нуля!");
     }
 
     public void setArea() {
         super.setArea(Math.PI * radius * radius);
     }
 
+    public double getArea(){
+        setArea();
+        return super.getArea();
+    }
+
     public void setPerimeter() {
         super.setPerimeter(Math.PI * 2 * radius);
+    }
+
+    public double getPerimeter(){
+        setPerimeter();
+        return super.getPerimeter();
+    }
+    @Override
+    public void move(double moveX, double moveY)
+    {
+        point.setX(point.getX() + moveX);
+        point.setY(point.getY() + moveY);
     }
 
     @Override
@@ -44,6 +57,8 @@ public class Circle extends Shape{
         System.out.println("Радиус круга: " + radius);
         System.out.println("Площадь круга: " + getArea());
         System.out.println("Периметр круга: " + getPerimeter());
-        System.out.println("Цветкруга: " + super.getColor());
+        System.out.println("Цвет круга: " + super.getColor());
+        System.out.println();
+        System.out.println();
     }
 }

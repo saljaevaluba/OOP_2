@@ -27,6 +27,7 @@ class Point extends Shape{
         System.out.println("Фигура точка");
         System.out.println("Коордтнаты: (x = " + x + ", y = " + y + ")");
         System.out.println("Цвет точки:" + getColor());
+        System.out.println();
     }
 
     @Override
