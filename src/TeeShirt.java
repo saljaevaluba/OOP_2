@@ -8,4 +8,13 @@ public class TeeShirt extends Clothes implements MensClothing, WomensClothing{
     public void dressWoman() {
 
     }
+
+    @Override
+    public void information() {
+        System.out.println("Одежда - Футболка");
+        System.out.println("Размер: " + getClothesSize() + " " + getClothesSize().getDescription());
+        System.out.println("Цвет: " + getClothesColor());
+        System.out.println("Цена: " + getClothesCost());
+        System.out.println();
+    }
 }
