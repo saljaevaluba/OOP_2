@@ -16,5 +16,10 @@ public class Main {
         System.out.println(phone3.getNumber());
 
         phone1.receiveCall("Qert", "+7(962)5930-63-3");
+
+        int count = 10;
+        Reader[] readers = new Reader[count];
+
+
     }
 }
