@@ -1,7 +1,5 @@
-import java.io.IOException;
-
 public class Main {
-    public static void main(String[] args)  throws IOException, Exception {
+    public static void main(String[] args)  throws Exception {
         Parser parser = new Parser();
         parser.parse();
     }

@@ -1,12 +1,12 @@
 public class Calculate {
-    public double add(double ... args) {
+    public double add(double ... args){
         double ans = 0;
         for(double arg : args){
             ans += arg;
         }
         return ans;
     }
-    public double subtract(double ... args) throws Exception {
+    public double subtract(double ... args){
         double ans = 0;
         for(double arg : args){
             ans -= arg;
@@ -14,8 +14,7 @@ public class Calculate {
         return ans;
     }
 
-    public double multiply(double ... args) throws Exception{
-        //if(args.getClass() != double) throw new Exception("Ошибка валидации входных параметров");
+    public double multiply(double ... args){
         double ans = 1;
         for(double arg : args){
             ans *= arg;
@@ -31,5 +30,4 @@ public class Calculate {
         }
         return ans;
     }
-
 }
